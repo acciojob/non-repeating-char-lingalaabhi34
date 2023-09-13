@@ -19,7 +19,7 @@ function firstNonRepeatedChar(str) {
 let str=prompt("enter the string");
 let result=firstNonRepeatedChar(str);
 if(result !== null){
-    alert(`The first non-repeated character is: ${result}`);
+    alert(`'${result}'`);
 }
 else{
     alert("null");
