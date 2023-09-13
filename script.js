@@ -1,22 +1,26 @@
 function firstNonRepeatedChar(str) {
  // Write your code here
-	 let obj={};
-        for(let i=0;i<arr.length;i++){
-            if(obj[arr[i]]!= undefined){
-                obj[arr[i]] +=1;
-            }
-            else{
-                obj[arr[i]]=1;
-            }
-        }
-        for(let i=0;i<arr.length;i++){
-            if(obj[arr[i]]==1){
-                return arr[i];
-            }
-        }
-      return null;
+	let obj={};
+	for(let i=0;i<str.length;i++){
+		if(obj[str[i]] !== undefined){
+			obj[str[i]] +=1;
+		}
+		else{
+			obj[str[i]]=1;
+		}
+	}
+	for(let i=0;i<str.length;i++){
+		if(obj[str[i]] == 1){
+			return str[i];
+		}
+	}
+	return null;
 }
-
-// const str = prompt("Enter a string");
-
-alert(firstNonRepeatedChar(str)); 
+let str=prompt("enter the string");
+let result=firstNonRepeatedChar(str);
+if(result !== null){
+    alert(`The first non-repeated character is: ${result}`);
+}
+else{
+    alert("null");
+}
